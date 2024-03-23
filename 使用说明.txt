@@ -1,0 +1,8 @@
+*该脚本用于模拟通讯干扰，可以挂载在任何想定上运行。具体功能为：当可以进行通讯干扰的电子战机打开属性为Communication Jammer的OECM时，作用范围内的敌方阵营和中立阵营的部分单位将会失联
+
+将压缩包中的Comms_jam_formal.lua放入CMO根目录的Lua文件夹下(一般为steamapps\common\Command - Modern Operations\Lua)
+进入CMO，用编辑器打开想要配置通讯干扰功能的想定，做如下操作：
+1.将Editor->Scenario Features+Settings中的Communications Disruption一项勾选
+2.添加一个定时触发器，标题自拟(例如15s)，推荐每15秒触发一次，也可以自行更改。
+3.添加一个类型为Lua Script的Action，标题自拟(例如ECM)，在执行窗口输入如下代码:ScenEdit_RunScript('Comms_jam_formal.lua')
+4.添加事件，Trigger使用上述15s触发器，Action使用上述ECM
