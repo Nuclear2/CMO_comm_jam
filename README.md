@@ -15,7 +15,7 @@ The script is designed to simulate communication interference and can be mounted
 2. Add a timed trigger (e.g., every 15 seconds) with a custom title (e.g., "15s").
 3. Add a Lua Script action with a custom title (e.g., "ECM"). In the execution window, input the following code: 
 ```shell
-ScenEdit_RunScript('Comms_jam_formal.lua').
+ScenEdit_RunScript('Comms_jam_formal.lua')
 ```
 4. Create an event where the trigger is set to the previously defined 15-second trigger, and the action is set to the "ECM" action above.
 
